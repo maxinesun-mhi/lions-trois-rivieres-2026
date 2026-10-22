@@ -1,0 +1,661 @@
+{
+  "games": [
+    {
+      "game_no": 1,
+      "official_id": "741004",
+      "date": "2026-11-12",
+      "time": "08:15",
+      "arena": "CL-MONGRAIN",
+      "a_type": "seed",
+      "a_ref": "rocket",
+      "b_type": "seed",
+      "b_ref": "seigneurs",
+      "stage": "Opening"
+    },
+    {
+      "game_no": 2,
+      "official_id": "741005",
+      "date": "2026-11-12",
+      "time": "08:45",
+      "arena": "J-G-TALBOT",
+      "a_type": "seed",
+      "a_ref": "mortagne",
+      "b_type": "seed",
+      "b_ref": "cascades",
+      "stage": "Opening"
+    },
+    {
+      "game_no": 3,
+      "official_id": "741006",
+      "date": "2026-11-12",
+      "time": "09:45",
+      "arena": "CL-MONGRAIN",
+      "a_type": "seed",
+      "a_ref": "as_quebec",
+      "b_type": "seed",
+      "b_ref": "college_francais",
+      "stage": "Opening"
+    },
+    {
+      "game_no": 4,
+      "official_id": "741007",
+      "date": "2026-11-12",
+      "time": "10:15",
+      "arena": "J-G-TALBOT",
+      "a_type": "seed",
+      "a_ref": "vert_noir",
+      "b_type": "seed",
+      "b_ref": "montreal",
+      "stage": "Opening"
+    },
+    {
+      "game_no": 5,
+      "official_id": "741008",
+      "date": "2026-11-12",
+      "time": "11:15",
+      "arena": "CL-MONGRAIN",
+      "a_type": "seed",
+      "a_ref": "pionniers",
+      "b_type": "seed",
+      "b_ref": "blizzard",
+      "stage": "Opening"
+    },
+    {
+      "game_no": 6,
+      "official_id": "741009",
+      "date": "2026-11-12",
+      "time": "11:45",
+      "arena": "J-G-TALBOT",
+      "a_type": "seed",
+      "a_ref": "lions",
+      "b_type": "seed",
+      "b_ref": "forestiers",
+      "stage": "Opening"
+    },
+    {
+      "game_no": 7,
+      "official_id": "741010",
+      "date": "2026-11-12",
+      "time": "12:45",
+      "arena": "CL-MONGRAIN",
+      "a_type": "seed",
+      "a_ref": "corsaires",
+      "b_type": "seed",
+      "b_ref": "dynamiques",
+      "stage": "Opening"
+    },
+    {
+      "game_no": 8,
+      "official_id": "741011",
+      "date": "2026-11-12",
+      "time": "13:15",
+      "arena": "J-G-TALBOT",
+      "a_type": "seed",
+      "a_ref": "conquerants",
+      "b_type": "seed",
+      "b_ref": "harfangs",
+      "stage": "Opening"
+    },
+    {
+      "game_no": 9,
+      "official_id": "741012",
+      "date": "2026-11-12",
+      "time": "14:15",
+      "arena": "CL-MONGRAIN",
+      "a_type": "seed",
+      "a_ref": "canam",
+      "b_type": "seed",
+      "b_ref": "select_nord_9",
+      "stage": "Opening"
+    },
+    {
+      "game_no": 10,
+      "official_id": "741013",
+      "date": "2026-11-12",
+      "time": "14:45",
+      "arena": "J-G-TALBOT",
+      "a_type": "seed",
+      "a_ref": "grenadiers",
+      "b_type": "seed",
+      "b_ref": "espoir",
+      "stage": "Opening"
+    },
+    {
+      "game_no": 11,
+      "official_id": "741014",
+      "date": "2026-11-12",
+      "time": "15:45",
+      "arena": "CL-MONGRAIN",
+      "a_type": "seed",
+      "a_ref": "albatros",
+      "b_type": "seed",
+      "b_ref": "select_nord_11",
+      "stage": "Opening"
+    },
+    {
+      "game_no": 12,
+      "official_id": "741015",
+      "date": "2026-11-13",
+      "time": "08:15",
+      "arena": "CL-MONGRAIN",
+      "a_type": "loser",
+      "a_ref": "1",
+      "b_type": "winner",
+      "b_ref": "11",
+      "stage": "Crossover"
+    },
+    {
+      "game_no": 13,
+      "official_id": "741016",
+      "date": "2026-11-13",
+      "time": "08:45",
+      "arena": "J-G-TALBOT",
+      "a_type": "loser",
+      "a_ref": "2",
+      "b_type": "winner",
+      "b_ref": "10",
+      "stage": "Crossover"
+    },
+    {
+      "game_no": 14,
+      "official_id": "741017",
+      "date": "2026-11-12",
+      "time": "16:15",
+      "arena": "J-G-TALBOT",
+      "a_type": "loser",
+      "a_ref": "3",
+      "b_type": "winner",
+      "b_ref": "5",
+      "stage": "Crossover"
+    },
+    {
+      "game_no": 15,
+      "official_id": "741018",
+      "date": "2026-11-12",
+      "time": "19:30",
+      "arena": "CL-MONGRAIN",
+      "a_type": "loser",
+      "a_ref": "4",
+      "b_type": "winner",
+      "b_ref": "6",
+      "stage": "Crossover"
+    },
+    {
+      "game_no": 16,
+      "official_id": "741019",
+      "date": "2026-11-13",
+      "time": "09:45",
+      "arena": "CL-MONGRAIN",
+      "a_type": "loser",
+      "a_ref": "10",
+      "b_type": "winner",
+      "b_ref": "7",
+      "stage": "Crossover"
+    },
+    {
+      "game_no": 17,
+      "official_id": "741020",
+      "date": "2026-11-13",
+      "time": "10:15",
+      "arena": "J-G-TALBOT",
+      "a_type": "loser",
+      "a_ref": "9",
+      "b_type": "winner",
+      "b_ref": "8",
+      "stage": "Crossover"
+    },
+    {
+      "game_no": 18,
+      "official_id": "741021",
+      "date": "2026-11-13",
+      "time": "13:15",
+      "arena": "J-G-TALBOT",
+      "a_type": "loser",
+      "a_ref": "7",
+      "b_type": "winner",
+      "b_ref": "2",
+      "stage": "Crossover"
+    },
+    {
+      "game_no": 19,
+      "official_id": "741022",
+      "date": "2026-11-13",
+      "time": "12:45",
+      "arena": "CL-MONGRAIN",
+      "a_type": "loser",
+      "a_ref": "8",
+      "b_type": "winner",
+      "b_ref": "1",
+      "stage": "Crossover"
+    },
+    {
+      "game_no": 20,
+      "official_id": "741023",
+      "date": "2026-11-13",
+      "time": "11:45",
+      "arena": "J-G-TALBOT",
+      "a_type": "loser",
+      "a_ref": "11",
+      "b_type": "winner",
+      "b_ref": "3",
+      "stage": "Crossover"
+    },
+    {
+      "game_no": 21,
+      "official_id": "741024",
+      "date": "2026-11-12",
+      "time": "17:45",
+      "arena": "J-G-TALBOT",
+      "a_type": "loser",
+      "a_ref": "5",
+      "b_type": "winner",
+      "b_ref": "4",
+      "stage": "Crossover"
+    },
+    {
+      "game_no": 22,
+      "official_id": "741025",
+      "date": "2026-11-12",
+      "time": "17:30",
+      "arena": "CL-MONGRAIN",
+      "a_type": "loser",
+      "a_ref": "6",
+      "b_type": "seed",
+      "b_ref": "estacades",
+      "stage": "Crossover"
+    },
+    {
+      "game_no": 23,
+      "official_id": "741026",
+      "date": "2026-11-14",
+      "time": "08:45",
+      "arena": "CL-MONGRAIN",
+      "a_type": "loser",
+      "a_ref": "13",
+      "b_type": "winner",
+      "b_ref": "12",
+      "stage": "Qualification"
+    },
+    {
+      "game_no": 24,
+      "official_id": "741027",
+      "date": "2026-11-13",
+      "time": "15:45",
+      "arena": "CL-MONGRAIN",
+      "a_type": "loser",
+      "a_ref": "12",
+      "b_type": "winner",
+      "b_ref": "13",
+      "stage": "Qualification"
+    },
+    {
+      "game_no": 25,
+      "official_id": "741028",
+      "date": "2026-11-13",
+      "time": "14:15",
+      "arena": "CL-MONGRAIN",
+      "a_type": "loser",
+      "a_ref": "15",
+      "b_type": "winner",
+      "b_ref": "14",
+      "stage": "Qualification"
+    },
+    {
+      "game_no": 26,
+      "official_id": "741029",
+      "date": "2026-11-13",
+      "time": "14:45",
+      "arena": "J-G-TALBOT",
+      "a_type": "loser",
+      "a_ref": "14",
+      "b_type": "winner",
+      "b_ref": "15",
+      "stage": "Qualification"
+    },
+    {
+      "game_no": 27,
+      "official_id": "741030",
+      "date": "2026-11-13",
+      "time": "16:15",
+      "arena": "COL-VIDEO-A",
+      "a_type": "loser",
+      "a_ref": "17",
+      "b_type": "winner",
+      "b_ref": "16",
+      "stage": "Qualification"
+    },
+    {
+      "game_no": 28,
+      "official_id": "741031",
+      "date": "2026-11-14",
+      "time": "10:15",
+      "arena": "CL-MONGRAIN",
+      "a_type": "loser",
+      "a_ref": "16",
+      "b_type": "winner",
+      "b_ref": "17",
+      "stage": "Qualification"
+    },
+    {
+      "game_no": 29,
+      "official_id": "741032",
+      "date": "2026-11-13",
+      "time": "19:15",
+      "arena": "C-VIDEOTRON",
+      "a_type": "loser",
+      "a_ref": "19",
+      "b_type": "winner",
+      "b_ref": "18",
+      "stage": "Qualification"
+    },
+    {
+      "game_no": 30,
+      "official_id": "741033",
+      "date": "2026-11-14",
+      "time": "12:00",
+      "arena": "CL-MONGRAIN",
+      "a_type": "loser",
+      "a_ref": "18",
+      "b_type": "winner",
+      "b_ref": "19",
+      "stage": "Qualification"
+    },
+    {
+      "game_no": 31,
+      "official_id": "741034",
+      "date": "2026-11-13",
+      "time": "17:45",
+      "arena": "COL-VIDEO-A",
+      "a_type": "loser",
+      "a_ref": "20",
+      "b_type": "winner",
+      "b_ref": "21",
+      "stage": "Qualification"
+    },
+    {
+      "game_no": 32,
+      "official_id": "741035",
+      "date": "2026-11-13",
+      "time": "17:15",
+      "arena": "CL-MONGRAIN",
+      "a_type": "loser",
+      "a_ref": "21",
+      "b_type": "winner",
+      "b_ref": "20",
+      "stage": "Qualification"
+    },
+    {
+      "game_no": 33,
+      "official_id": "741036",
+      "date": "2026-11-13",
+      "time": "11:15",
+      "arena": "CL-MONGRAIN",
+      "a_type": "loser",
+      "a_ref": "22",
+      "b_type": "winner",
+      "b_ref": "9",
+      "stage": "Qualification"
+    },
+    {
+      "game_no": 34,
+      "official_id": "741037",
+      "date": "2026-11-13",
+      "time": "18:45",
+      "arena": "CL-MONGRAIN",
+      "a_type": "unknown",
+      "a_ref": "",
+      "b_type": "winner",
+      "b_ref": "22",
+      "stage": "Qualification"
+    },
+    {
+      "game_no": 35,
+      "official_id": "741038",
+      "date": "2026-11-14",
+      "time": "08:15",
+      "arena": "J-G-TALBOT",
+      "a_type": "winner",
+      "a_ref": "25",
+      "b_type": "winner",
+      "b_ref": "27",
+      "stage": "Playoff"
+    },
+    {
+      "game_no": 36,
+      "official_id": "741039",
+      "date": "2026-11-14",
+      "time": "09:45",
+      "arena": "J-G-TALBOT",
+      "a_type": "winner",
+      "a_ref": "24",
+      "b_type": "winner",
+      "b_ref": "26",
+      "stage": "Playoff"
+    },
+    {
+      "game_no": 37,
+      "official_id": "741040",
+      "date": "2026-11-14",
+      "time": "13:30",
+      "arena": "CL-MONGRAIN",
+      "a_type": "winner",
+      "a_ref": "29",
+      "b_type": "winner",
+      "b_ref": "31",
+      "stage": "Playoff"
+    },
+    {
+      "game_no": 38,
+      "official_id": "741041",
+      "date": "2026-11-14",
+      "time": "11:30",
+      "arena": "J-G-TALBOT",
+      "a_type": "winner",
+      "a_ref": "32",
+      "b_type": "winner",
+      "b_ref": "34",
+      "stage": "Playoff"
+    },
+    {
+      "game_no": 39,
+      "official_id": "741042",
+      "date": "2026-11-14",
+      "time": "13:00",
+      "arena": "J-G-TALBOT",
+      "a_type": "winner",
+      "a_ref": "23",
+      "b_type": "winner",
+      "b_ref": "35",
+      "stage": "Playoff"
+    },
+    {
+      "game_no": 40,
+      "official_id": "741043",
+      "date": "2026-11-14",
+      "time": "15:15",
+      "arena": "CL-MONGRAIN",
+      "a_type": "winner",
+      "a_ref": "36",
+      "b_type": "winner",
+      "b_ref": "28",
+      "stage": "Playoff"
+    },
+    {
+      "game_no": 41,
+      "official_id": "741044",
+      "date": "2026-11-14",
+      "time": "18:30",
+      "arena": "CL-MONGRAIN",
+      "a_type": "winner",
+      "a_ref": "37",
+      "b_type": "winner",
+      "b_ref": "33",
+      "stage": "Playoff"
+    },
+    {
+      "game_no": 42,
+      "official_id": "741045",
+      "date": "2026-11-14",
+      "time": "17:00",
+      "arena": "CL-MONGRAIN",
+      "a_type": "winner",
+      "a_ref": "30",
+      "b_type": "winner",
+      "b_ref": "38",
+      "stage": "Playoff"
+    },
+    {
+      "game_no": 43,
+      "official_id": "741046",
+      "date": "2026-11-15",
+      "time": "09:00",
+      "arena": "J-G-TALBOT",
+      "a_type": "winner",
+      "a_ref": "39",
+      "b_type": "winner",
+      "b_ref": "41",
+      "stage": "Semi-final"
+    },
+    {
+      "game_no": 44,
+      "official_id": "741047",
+      "date": "2026-11-15",
+      "time": "09:00",
+      "arena": "CL-MONGRAIN",
+      "a_type": "winner",
+      "a_ref": "40",
+      "b_type": "winner",
+      "b_ref": "42",
+      "stage": "Semi-final"
+    },
+    {
+      "game_no": 45,
+      "official_id": "741048",
+      "date": "2026-11-15",
+      "time": "14:00",
+      "arena": "J-G-TALBOT",
+      "a_type": "winner",
+      "a_ref": "43",
+      "b_type": "winner",
+      "b_ref": "44",
+      "stage": "Final"
+    }
+  ],
+  "teams": [
+    {
+      "team_id": "rocket",
+      "name": "ROCKET JR LAVAL",
+      "label": "ROCKET JR LAVAL"
+    },
+    {
+      "team_id": "seigneurs",
+      "name": "SEIGNEURS DES MILLE-ILES",
+      "label": "SEIGNEURS DES MILLE-ILES"
+    },
+    {
+      "team_id": "mortagne",
+      "name": "NOIR ET OR DE MORTAGNE",
+      "label": "NOIR ET OR DE MORTAGNE"
+    },
+    {
+      "team_id": "cascades",
+      "name": "CASCADES ÉLITE",
+      "label": "CASCADES ÉLITE"
+    },
+    {
+      "team_id": "as_quebec",
+      "name": "AS QUÉBEC",
+      "label": "AS QUÉBEC"
+    },
+    {
+      "team_id": "college_francais",
+      "name": "COLLEGE FRANCAIS",
+      "label": "COLLEGE FRANCAIS"
+    },
+    {
+      "team_id": "vert_noir",
+      "name": "VERT & NOIR DE L'ÉCOLE",
+      "label": "VERT & NOIR DE L'ÉCOLE"
+    },
+    {
+      "team_id": "montreal",
+      "name": "MONTRÉAL ÉLITE",
+      "label": "MONTRÉAL ÉLITE"
+    },
+    {
+      "team_id": "pionniers",
+      "name": "PIONNIERS LANAUDIÈRE",
+      "label": "PIONNIERS LANAUDIÈRE"
+    },
+    {
+      "team_id": "blizzard",
+      "name": "BLIZZARD SSF",
+      "label": "BLIZZARD SSF"
+    },
+    {
+      "team_id": "lions",
+      "name": "LIONS LAC ST-LOUIS",
+      "label": "LIONS LAC ST-LOUIS"
+    },
+    {
+      "team_id": "forestiers",
+      "name": "FORESTIERS A-T",
+      "label": "FORESTIERS A-T"
+    },
+    {
+      "team_id": "corsaires",
+      "name": "CORSAIRES POINTE-LÉVY",
+      "label": "CORSAIRES POINTE-LÉVY"
+    },
+    {
+      "team_id": "dynamiques",
+      "name": "DYNAMIQUES CCL",
+      "label": "DYNAMIQUES CCL"
+    },
+    {
+      "team_id": "conquerants",
+      "name": "CONQUÉRANTS",
+      "label": "CONQUÉRANTS"
+    },
+    {
+      "team_id": "harfangs",
+      "name": "HARFANGS SHERBROOKE",
+      "label": "HARFANGS SHERBROOKE"
+    },
+    {
+      "team_id": "canam",
+      "name": "CANAM BEAUCE-APPALACHES",
+      "label": "CANAM BEAUCE-APPALACHES"
+    },
+    {
+      "team_id": "select_nord_9",
+      "name": "SÉLECT DU NORD",
+      "label": "SÉLECT DU NORD [opening #9]"
+    },
+    {
+      "team_id": "grenadiers",
+      "name": "GRENADIERS LAC ST-LOUIS",
+      "label": "GRENADIERS LAC ST-LOUIS"
+    },
+    {
+      "team_id": "espoir",
+      "name": "ESPOIR SAGUENAY LAC",
+      "label": "ESPOIR SAGUENAY LAC"
+    },
+    {
+      "team_id": "albatros",
+      "name": "ALBATROS",
+      "label": "ALBATROS"
+    },
+    {
+      "team_id": "select_nord_11",
+      "name": "SÉLECT DU NORD",
+      "label": "SÉLECT DU NORD [opening #11]"
+    },
+    {
+      "team_id": "estacades",
+      "name": "ESTACADES MAURICIE",
+      "label": "ESTACADES MAURICIE"
+    }
+  ]
+}

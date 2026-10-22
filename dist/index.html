@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Lions Lac St-Louis M13 scenarios at the Challenge AAA Élite tournament in Trois-Rivières, November 12–15, 2026.">
+  <meta name="theme-color" content="#112c42">
+  <title>Lions M13 · Trois-Rivières 2026</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./js/app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div><p class="eyebrow">CHALLENGE M13 AAA ÉLITE · TROIS-RIVIÈRES</p><h1>Follow the Lions.</h1><p class="hero-sub">Every matchup. Every crossover. Your tournament scenario.</p></div>
+      <div class="hero-date"><strong>12–15</strong><span>NOVEMBER 2026</span></div>
+    </header>
+    <div class="source-strip"><span>45 listed games · #34 conditional</span><span>Winner + loser routes</span><a href="./source-verification.md" download>Source audit ↓</a></div>
+    <div id="boot-message" role="status">Loading your scenario planner…</div>
+    <div class="workspace" id="workspace" hidden>
+      <aside class="editor-panel" aria-label="Scenario editor">
+        <p class="eyebrow">SCENARIO EDITOR</p><h2>Change a result</h2>
+        <label for="selected-game">Choose a game</label><select id="selected-game"></select>
+        <div id="selected-summary"></div>
+        <div id="result-editor"></div>
+        <p class="small-note">Changing an upstream result clears saved results whose matchups change. Independent results stay in place.</p>
+        <details id="conditional-details"><summary>Conditional #34 · manual controls</summary><p>The PDF gives only Winner #22 and “Si Nécessaire”. Its other opponent and activation rule are unspecified.</p><div id="conditional-editor"></div></details>
+        <details open><summary>Save, restore & reset</summary>
+          <p class="storage-note" id="storage-note">Changes are saved on this browser. Download JSON to move a scenario between devices.</p>
+          <button type="button" class="button full" id="save-json">Save scenario (.json)</button>
+          <label for="import-json" class="upload-label">Restore a saved scenario</label><input id="import-json" type="file" accept=".json,application/json">
+          <div class="export-grid"><button type="button" class="button" id="save-csv">Matchups CSV</button><button type="button" class="button" id="save-svg">Bracket SVG</button></div>
+          <button type="button" class="button danger full" id="reset">Reset all results</button>
+        </details>
+      </aside>
+      <main class="main-panel">
+        <div class="metrics" id="metrics"></div>
+        <nav class="tabs" aria-label="Planner views"><button type="button" data-tab="lions" aria-current="page">Lions path</button><button type="button" data-tab="schedule">All matchups</button><button type="button" data-tab="bracket">Visual bracket</button><button type="button" data-tab="source">Dependencies & source</button></nav>
+        <section class="tab-body" id="view-body" aria-live="polite"></section>
+      </main>
+    </div>
+    <footer>Scenario planner · Lions Lac St-Louis M13 · Based on the supplied schedule; no live results feed.</footer>
+  </div>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="reset-dialog"><h2>Reset this scenario?</h2><p>This clears every result and returns #34 to unresolved. Save a JSON copy first if you want to keep your scenario.</p><div class="dialog-actions"><button class="button" id="cancel-reset">Keep scenario</button><button class="button danger" id="confirm-reset">Reset all</button></div></dialog>
+</body>
+</html>
