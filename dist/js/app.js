@@ -81,7 +81,7 @@ function lionsView() {
   } else {
     summary=`<div class="next-game"><p>${row(45).winner === 'lions' ? 'Lions win this scenario.' : games.some(g=>flags(g).possible && !g.winner) ? 'The next Lions matchup depends on feeder results or conditional #34. Select a highlighted game below.' : 'No unresolved onward Lions matchup is available under the printed routes and your current results.'}</p></div>`;
   }
-  return `<h2>The Lions’ route</h2>${summary}<p class="muted">Solid black marks a known Lions matchup. Dashed black marks a route still possible under your results. Routes through #34 remain conditional.</p>${resultTable(games)}<details><summary>Read the four printed Lions branches</summary><ul><li>Win #6 → #15; lose #15 → #25 → #35 → #39 → #43 → #45.</li><li>Win #6 → #15; win #15 → #26 → #36 → #40 → #44 → #45.</li><li>Lose #6 → #22; lose #22 → #33 → #41 → #43 → #45.</li><li>Lose #6 → #22; win #22 → conditional #34 → #38 → #42 → #44 → #45.</li></ul><p>After the stated win/lose branches, every arrow follows the winner. No extra elimination or bypass rule is assumed.</p></details>`;
+  return `<h2>The Lions’ route</h2>${summary}${resultTable(games)}<details><summary>Read the four printed Lions branches</summary><ul><li>Win #6 → #15; lose #15 → #25 → #35 → #39 → #43 → #45.</li><li>Win #6 → #15; win #15 → #26 → #36 → #40 → #44 → #45.</li><li>Lose #6 → #22; lose #22 → #33 → #41 → #43 → #45.</li><li>Lose #6 → #22; win #22 → conditional #34 → #38 → #42 → #44 → #45.</li></ul><p>After the stated win/lose branches, every arrow follows the winner. No extra elimination or bypass rule is assumed.</p></details>`;
 }
 function chronological(a,b) {return `${a.date} ${a.time}`.localeCompare(`${b.date} ${b.time}`) || a.game_no-b.game_no;}
 function scheduleRows() {return evaluated.filter(g=> (day === 'all' || g.date === day) && (teamFilter === 'all' || (teamFilter === 'confirmed' ? flags(g).known : flags(g).known || flags(g).possible))).sort(chronological);}
@@ -93,13 +93,9 @@ function currentSvg() {return bracketSvg(data,evaluated,bracketKeep());}
 function bracketView() {
   return `<h2>Winner & loser dependencies</h2><div class="filters"><div><label for="bracket-scope">Show</label><select id="bracket-scope">${option('lions','Lions corridor (all printed branches)',scope)}${option('all','Entire tournament',scope)}${option('selected','Selected game + dependencies',scope)}</select></div><div><label for="bracket-zoom">Bracket scale <output id="zoom-value">${zoom}%</output></label><input type="range" id="bracket-zoom" min="50" max="120" step="5" value="${zoom}"></div></div><div class="bracket-export-actions"><strong>Save visual bracket</strong><button type="button" class="button" id="save-jpeg" data-bracket-export>Save JPEG</button><button type="button" class="button" id="save-pdf" data-bracket-export>Save PDF</button></div><div class="legend"><span>━ Winner route</span><span>┄ Loser route</span><span class="gold">Black: known / possible Lions route</span></div><p class="muted">Scroll to explore. Click a card to edit. Hidden feeders retain their printed labels.</p><div class="bracket-scroll"><div class="bracket-canvas" id="bracket-canvas" style="zoom:${zoom/100}">${currentSvg()}</div></div>`;
 }
-function sourceView() {
-  const g=row(selected), up=ancestors(data,selected), down=descendants(data,selected);
-  return `<h2>Selected game dependencies</h2><div class="dependencies"><h3>Game #${g.game_no} · ${esc(g.name_a)} vs ${esc(g.name_b)}</h3><p><strong>Printed inputs:</strong> ${esc(sourceLabel(g.a_type,g.a_ref))} vs ${esc(sourceLabel(g.b_type,g.b_ref))}</p><p><strong>Winner goes to:</strong> ${route(selected,'winner')}</p><p><strong>Loser goes to:</strong> ${route(selected,'loser')}</p><p><strong>All upstream games:</strong> ${up.length ? up.map(edit).join(' ') : 'None'}</p><p><strong>All downstream games:</strong> ${down.length ? down.map(edit).join(' ') : 'None'}</p><p class="small-note">Dependencies follow the printed graph, including branches excluded by current results. #34 remains conditional.</p></div><h2>What the source says</h2><div class="notice"><strong>Conditional #34</strong><p>Friday 13 Nov, 18:45, CL-MONGRAIN. The first line is blank; the second says Gagnant #22-741025. “Si Nécessaire” appears below. Its missing opponent, activation condition and skipped-game advancement are not supplied. Manual choices are scenario assumptions.</p></div><div class="notice"><strong>SÉLECT DU NORD is listed twice</strong><p>The PDF lists this name in both opening #9 and #11. The app preserves two source slots, labelled by opening game, until the organizer clarifies their identity.</p></div><p>The PDF supplies no tie-break, overtime, standings, reseeding, match-duration or additional elimination rules. A/B are the first and second printed participant lines and do not establish home/away status.</p><p>Every game ID, date, time, arena and ordered dependency was checked against the one-page PDF. Stage groupings are navigation aids; only semi-final and final labels are printed.</p><div class="source-links"><a href="./source-verification.md" target="_blank" rel="noopener">Read the 45-game source audit ↗</a></div><p class="small-note">The original PDF is not publicly distributed with this site.</p><p class="small-note">Each visitor has their own scenario, saved in that browser when storage is available. This planner has no live tournament results feed.</p>`;
-}
 function renderView() {
   document.querySelectorAll('[data-tab]').forEach(b=>{if(b.dataset.tab===view)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
-  $('view-body').innerHTML = ({lions:lionsView,schedule:scheduleView,bracket:bracketView,source:sourceView})[view]();
+  $('view-body').innerHTML = ({lions:lionsView,schedule:scheduleView,bracket:bracketView})[view]();
 }
 function render() {renderEditor();renderMetrics();renderView();}
 function readScore(value) {const s=value.trim();if(!s)return null;if(!/^\d+$/.test(s))throw new Error('Scores must be non-negative whole numbers, or both blank.');const n=Number(s);if(!Number.isSafeInteger(n))throw new Error('Score is too large.');return n;}
@@ -112,7 +108,7 @@ document.addEventListener('submit',e=>{
 });
 document.addEventListener('click',async e=>{
   const game=e.target.closest('[data-game]');
-  if(game){const n=Number(game.dataset.game);if(data.games.some(g=>g.game_no===n)){selected=n;renderEditor();if(view==='source'||scope==='selected')renderView();if(innerWidth<760)$('selected-game').scrollIntoView({behavior:'smooth',block:'center'});}return;}
+  if(game){const n=Number(game.dataset.game);if(data.games.some(g=>g.game_no===n)){selected=n;renderEditor();if(scope==='selected')renderView();if(innerWidth<760)$('selected-game').scrollIntoView({behavior:'smooth',block:'center'});}return;}
   const tab=e.target.closest('[data-tab]');if(tab){view=tab.dataset.tab;renderView();return;}
   const id=e.target.closest('button')?.id;
   try {
@@ -129,7 +125,7 @@ document.addEventListener('click',async e=>{
 document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('svg [data-game]')){e.preventDefault();e.target.dispatchEvent(new MouseEvent('click',{bubbles:true}));}});
 document.addEventListener('change',e=>{
   const id=e.target.id;
-  if(id==='selected-game'){selected=Number(e.target.value);renderEditor();if(view==='source'||scope==='selected')renderView();}
+  if(id==='selected-game'){selected=Number(e.target.value);renderEditor();if(scope==='selected')renderView();}
   if(id==='day-filter'){day=e.target.value;$('schedule-table').innerHTML=resultTable(scheduleRows());}
   if(id==='team-filter'){teamFilter=e.target.value;$('schedule-table').innerHTML=resultTable(scheduleRows());}
   if(id==='bracket-scope'){scope=e.target.value;renderView();}
