@@ -51,7 +51,7 @@ export function jpegToPdf(jpegBytes, width, height) {
   append(`5 0 obj\n<< /Length ${content.length} >>\nstream\n`);
   append(content);
   append('endstream\nendobj\n');
-  object(6, '<< /Title (Tournament Trois-Rivieres - Lions M13AAA Elite) /Author (Maxine) /Creator (Lions tournament planner) >>');
+  object(6, '<< /Title (Tournament Trois-Rivieres - Lions M13AAA Elite) /Author (Maxine Sun) /Creator (Lions tournament planner) >>');
   const xref = length;
   append(`xref\n0 7\n0000000000 65535 f \n${offsets.slice(1).map(offset => `${String(offset).padStart(10, '0')} 00000 n \n`).join('')}trailer\n<< /Size 7 /Root 1 0 R /Info 6 0 R >>\nstartxref\n${xref}\n%%EOF\n`);
   const pdf = new Uint8Array(length);
@@ -84,17 +84,12 @@ function titledSvg(svgString) {
   svg.innerHTML = `<rect width="${width}" height="${height}" fill="#ffffff"/>` +
     `<text x="${padding + 2}" y="40" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">${TITLE}</text>` +
     `<text x="${padding + 2}" y="69" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="18">${DATE_LABEL}</text>` +
-    `<text x="${padding + 2}" y="94" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="16">Prepared by Maxine</text>`;
+    `<text x="${padding + 2}" y="94" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="16">Prepared by Maxine Sun</text>`;
   bracket.setAttribute('x', String((width - bracketWidth) / 2));
   bracket.setAttribute('y', String(headerHeight));
   bracket.setAttribute('width', String(bracketWidth));
   bracket.setAttribute('height', String(bracketHeight));
   bracket.style.fontFamily = 'Arial, Helvetica, sans-serif';
-  for (const text of bracket.querySelectorAll('text')) {
-    if (text.textContent.includes(' · Select a game to edit')) {
-      text.textContent = text.textContent.replace(' · Select a game to edit', '');
-    }
-  }
   const background = [...bracket.children].find(child => child.localName === 'rect');
   if (background) background.setAttribute('fill', '#ffffff');
   const fonts = document.createElementNS(SVG_NS, 'style');

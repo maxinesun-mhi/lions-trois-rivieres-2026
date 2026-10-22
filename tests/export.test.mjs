@@ -43,7 +43,7 @@ test('PDF fits the entire image proportionally inside a single page', () => {
   assert.equal(y, 36);
   assert.ok(Math.abs(imageWidth + x * 2 - pageWidth) < 0.001);
   assert.ok(Math.abs(imageHeight + y * 2 - pageHeight) < 0.001);
-  assert.match(text, /\/Author \(Maxine\)/);
+  assert.match(text, /\/Author \(Maxine Sun\)/);
 });
 
 test('invalid image dimensions and unsupported downloads fail clearly', async () => {

@@ -125,8 +125,7 @@ export function bracketSvg(data, evaluated, keep = null) {
     '<desc id="bracket-desc">Games proceed from left to right. Solid arrows carry winners and dashed arrows carry losers. Thick black arrows show available Lions Lac St-Louis routes under the current results. A solid black card border means the Lions are a confirmed entrant; a dashed black border means they are a possible entrant. Game 34 is conditional in the source. Select a game card to edit its result, using Enter or Space when focused. The complete schedule, scores, and team names are included in each card title.</desc>',
     '<defs><marker id="arrow-normal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#aaaaaa"/></marker><marker id="arrow-lions" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker></defs>',
     '<style>.tournament-bracket{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.bracket-node{cursor:pointer;outline:none}.bracket-node:hover .node-card,.bracket-node:focus .node-card{stroke:#000000;stroke-width:3.5}.bracket-node text{pointer-events:none}.bracket-node.is-selected .node-card{stroke:#000000;stroke-width:4}.bracket-edge{fill:none;pointer-events:none}.bracket-edge-label{font-size:9px;paint-order:stroke;stroke:#f5f5f5;stroke-width:3px;stroke-linejoin:round}</style>',
-    `<rect width="${width}" height="${height}" fill="#f5f5f5"/>`,
-    '<text x="26" y="23" fill="#444444" font-size="11">Solid arrows: winner · Dashed arrows: loser · Black: Lions route · Select a game to edit</text>'
+    `<rect width="${width}" height="${height}" fill="#f5f5f5"/>`
   ];
   groups.forEach((group, column) => {
     out.push(`<text x="${marginX + column * (cardW + gapX)}" y="57" fill="#111111" font-size="14" font-weight="700">${esc(group.title)}</text>`);
