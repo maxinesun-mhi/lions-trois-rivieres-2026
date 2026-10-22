@@ -1,6 +1,6 @@
 # Lions M13 · Trois-Rivières 2026
 
-A browser-based scenario planner for the Challenge M13 AAA Élite tournament, November 12–15, 2026. It includes all 45 source games, editable results, winner/loser propagation, the Lions' possible routes, schedule tables, a visual bracket, reset, and scenario/report downloads.
+A browser-based scenario planner for the Challenge M13 AAA Élite tournament, November 12–15, 2026. It includes all 45 source games, editable results, winner/loser propagation, the Lions' possible routes, schedule tables, a visual bracket, and JPEG/PDF bracket downloads.
 
 This version runs on **GitHub Pages**. Visitors need only a browser; no R installation or server is required. The complete routing audit is included in the planner. The original source PDF is omitted from this public release for privacy.
 
@@ -22,9 +22,11 @@ Choose a game, select its winner, optionally enter both scores, and apply the re
 
 Game **#34** remains an explicit scenario choice. Its opponent, activation condition and skipped-game advancement are not supplied by the tournament PDF. The app does not invent those rules.
 
-Each visitor has an independent scenario saved in their own browser when storage is available. Results are not shared or synchronized through GitHub. Download **Save scenario (.json)** to keep a backup or move it to another device. Scenarios from the previous hosted site do not transfer automatically: save the JSON there and restore it on this new site. The original R Shiny scenario format is supported as well.
+Each visitor has an independent scenario saved in their own browser when storage is available. Results are not shared or synchronized through GitHub.
 
-The planner also exports CSV reports and SVG brackets. Reset asks before clearing results. It does not receive live tournament scores.
+To save the filled bracket, open **Visual bracket**, choose the view, then select **Save JPEG** or **Save PDF**. The download contains the whole selected bracket, including parts outside the scroll area, with current teams, winners and scores. The PDF uses one page that preserves the bracket's proportions; zoom in for the full tournament view. The app provides no JSON/CSV/SVG downloads, file restore, or global reset controls. Individual game results can still be changed or cleared in the editor.
+
+The planner does not receive live tournament scores.
 
 ## Local preview
 
